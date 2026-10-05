@@ -1,199 +1,293 @@
 /* ==================================================
-   ESTILO.CSS — Landing Page GreenNest
-   Cada bloco estiliza uma seção do index.html
+   ESTILO.CSS — Landing Page Mochi Cosplay
+   Paleta inspirada na logo da loja
    ================================================== */
 
-/* ---------- RESET: zera as diferenças entre navegadores ---------- */
+/* ---------- RESET ---------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* border-box: o padding não aumenta a largura do elemento */
 }
 
-/* ---------- VARIÁVEIS: a paleta em um só lugar ---------- */
+/* ---------- VARIÁVEIS DE CORES ---------- */
+
 :root {
-    --verde: #10B981;      /* cor principal da marca */
-    --roxo: #7C3AED;       /* cor de apoio */
-    --ciano: #00D4FF;      /* destaque do CTA */
-    --escuro: #0D0D1A;     /* fundo escuro */
-    --claro: #F8FAFC;      /* texto claro */
+    --rosa: #F7A6B8;          /* rosa pastel principal */
+    --coral: #E96A7A;         /* coral/vermelho da logo */
+    --rosa-claro: #FCE4EA;    /* rosa bem claro */
+    --amarelo: #F6D98B;       /* amarelo pastel */
+    --creme: #FFF8EF;         /* fundo creme */
+    --escuro: #5A3540;        /* texto marrom/rosado */
+    --branco: #FFFFFF;        /* branco */
 }
+
+/* ---------- BODY ---------- */
 
 body {
     font-family: Arial, sans-serif;
-    background: var(--escuro);
-    color: var(--claro);
-    /* var(): usa a variável declarada acima — mude ali, muda tudo */
+    background: var(--creme);
+    color: var(--escuro);
 }
 
-/* ---------- HEADER fixo no topo ---------- */
+/* ---------- HEADER ---------- */
+
 header {
-    display: flex;                 /* flexbox: alinha logo e menu */
-    justify-content: space-between; /* um em cada ponta */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+
     padding: 16px 40px;
-    position: sticky;              /* fica FIXO ao rolar a página */
+
+    position: sticky;
     top: 0;
-    background: var(--escuro);
-    border-bottom: 1px solid var(--roxo);
+
+    background: var(--branco);
+
+    border-bottom: 2px solid var(--rosa);
 }
 
 nav a {
-    color: var(--claro);
-    text-decoration: none;         /* tira o sublinhado do link */
+    color: var(--escuro);
+    text-decoration: none;
     margin-left: 24px;
+
+    transition: color 0.2s;
 }
 
 nav a:hover {
-    color: var(--ciano);           /* muda a cor ao passar o mouse */
+    color: var(--coral);
 }
 
-/* ---------- HERO: ocupa a tela inteira ---------- */
+/* ---------- HERO ---------- */
+
 .hero {
-    min-height: 100vh;             /* 100% da altura da tela */
+    min-height: 100vh;
+
     display: flex;
-    align-items: center;           /* centraliza verticalmente */
+    align-items: center;
     justify-content: space-around;
+
     padding: 40px;
+
+    background: var(--rosa-claro);
 }
 
 .hero-texto h2 {
     font-size: 48px;
-    line-height: 1.2;              /* espaçamento entre linhas */
+    line-height: 1.2;
+
+    color: var(--coral);
 }
 
 .hero-texto p {
     margin: 16px 0 24px;
-    color: #B8C5D6;
+
+    color: var(--escuro);
 }
 
-/* ---------- CTA: o botão que converte ---------- */
+/* ---------- BOTÃO CTA ---------- */
+
 .botao-cta {
     display: inline-block;
-    background: var(--ciano);
-    color: var(--escuro);
+
+    background: var(--coral);
+    color: var(--branco);
+
     padding: 16px 40px;
-    border-radius: 12px;           /* cantos arredondados */
+
+    border-radius: 12px;
+
     text-decoration: none;
     font-weight: bold;
-    transition: transform 0.2s;    /* animação suave */
+
+    transition: transform 0.2s, background 0.2s;
 }
 
 .botao-cta:hover {
-    transform: scale(1.05);        /* cresce 5% ao passar o mouse */
+    transform: scale(1.05);
+
+    background: var(--rosa);
 }
 
-/* ---------- SHOWCASE: grid de produtos ---------- */
+/* ---------- SHOWCASE: PRODUTOS ---------- */
+
 .grade-produtos {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
-    /* 4 colunas iguais — o grid se adapta sozinho */
-    gap: 24px;                     /* espaçamento entre os cards */
-    list-style: none;              /* tira as bolinhas da lista */
+
+    gap: 24px;
+
+    list-style: none;
+
     padding: 40px;
 }
 
 .card {
-    background: #151526;
-    border: 1px solid var(--roxo);
-    border-radius: 12px;
+    background: var(--branco);
+
+    border: 2px solid var(--rosa);
+
+    border-radius: 16px;
+
     padding: 16px;
+
     text-align: center;
+
+    box-shadow: 0 4px 12px rgba(233, 106, 122, 0.12);
+
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card img {
-    width: 100%;                   /* imagem ocupa o card todo */
-    border-radius: 8px;
+    width: 100%;
+
+    border-radius: 10px;
 }
 
 .preco {
-    color: var(--verde);
+    color: var(--coral);
+
     font-weight: bold;
+
     font-size: 20px;
 }
 
-/* ---------- PROVA SOCIAL: 3 depoimentos lado a lado ---------- */
+/* ---------- DEPOIMENTOS ---------- */
+
 .grade-depoimentos {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
+
     gap: 24px;
+
     padding: 40px;
 }
 
 .depoimento {
-    background: #151526;
-    border: 1px solid var(--roxo);
-    border-radius: 12px;
+    background: var(--branco);
+
+    border: 2px solid var(--rosa);
+
+    border-radius: 16px;
+
     padding: 24px;
+
     text-align: center;
+
+    box-shadow: 0 4px 12px rgba(233, 106, 122, 0.10);
 }
 
 .depoimento img {
-    border-radius: 50%;            /* foto redonda! */
+    border-radius: 50%;
+
     width: 80px;
     height: 80px;
+
+    border: 3px solid var(--rosa);
 }
 
-/* ---------- FAQ: estilizando o acordeão nativo ---------- */
+/* ---------- FAQ ---------- */
+
 details {
-    background: #151526;
-    border: 1px solid var(--roxo);
-    border-radius: 8px;
+    background: var(--branco);
+
+    border: 2px solid var(--rosa);
+
+    border-radius: 12px;
+
     padding: 16px 24px;
-    margin: 12px 40px;             /* 12px em cima/baixo, 40px nos lados */
+
+    margin: 12px 40px;
 }
 
 summary {
-    cursor: pointer;               /* mãozinha ao passar o mouse */
+    cursor: pointer;
+
     font-weight: bold;
+
+    color: var(--escuro);
 }
 
 details p {
     margin-top: 12px;
-    color: var(--verde);
+
+    color: var(--coral);
 }
 
 /* ---------- FOOTER + NEWSLETTER ---------- */
+
 footer {
-    border-top: 2px solid var(--roxo);
+    border-top: 2px solid var(--rosa);
+
     padding: 40px;
+
     text-align: center;
+
+    background: var(--rosa-claro);
 }
 
 .newsletter input {
     padding: 12px;
+
     border-radius: 8px;
-    border: none;
+
+    border: 2px solid var(--rosa);
+
     width: 260px;
+
+    background: var(--branco);
 }
 
 .newsletter button {
     padding: 12px 24px;
-    background: var(--verde);
-    color: var(--escuro);
+
+    background: var(--coral);
+
+    color: var(--branco);
+
     border: none;
+
     border-radius: 8px;
+
     font-weight: bold;
+
     cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+.newsletter button:hover {
+    background: var(--rosa);
 }
 
 .copyright {
     margin-top: 24px;
-    color: #8894a8;
+
+    color: #9B6873;
+
     font-size: 14px;
 }
 
-/* ---------- RESPONSIVIDADE: mobile-first ---------- */
-/* Abaixo de 800px, o layout se adapta ao celular */
+/* ---------- RESPONSIVIDADE ---------- */
+
 @media (max-width: 800px) {
+
     .hero {
-        flex-direction: column;    /* texto em cima, imagem embaixo */
+        flex-direction: column;
+
         text-align: center;
     }
 
     .grade-produtos {
-        grid-template-columns: 1fr; /* 1 coluna: cards empilham */
+        grid-template-columns: 1fr;
     }
 
     .grade-depoimentos {
