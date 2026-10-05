@@ -1,6 +1,6 @@
 /* ==================================================
    ESTILO.CSS — Landing Page Mochi Cosplay
-   Paleta inspirada na logo da loja
+   Paleta baseada na logo da loja
    ================================================== */
 
 /* ---------- RESET ---------- */
@@ -11,46 +11,56 @@
     box-sizing: border-box;
 }
 
-/* ---------- VARIÁVEIS DE CORES ---------- */
+/* ---------- VARIÁVEIS: PALETA DA LOGO ---------- */
 
 :root {
-    --rosa: #F7A6B8;          /* rosa pastel principal */
-    --coral: #E96A7A;         /* coral/vermelho da logo */
-    --rosa-claro: #FCE4EA;    /* rosa bem claro */
+    --rosa: #F7A6B8;          /* rosa pastel */
+    --coral: #E96A7A;         /* rosa/vermelho principal */
+    --rosa-claro: #FCE4EA;    /* rosa bem suave */
     --amarelo: #F6D98B;       /* amarelo pastel */
-    --creme: #FFF8EF;         /* fundo creme */
-    --escuro: #5A3540;        /* texto marrom/rosado */
-    --branco: #FFFFFF;        /* branco */
+    --creme: #FFF8EF;         /* fundo igual ao estilo da logo */
+    --creme-escuro: #FFF0E2;  /* variação do fundo */
+    --marrom: #5A3540;        /* texto */
+    --branco: #FFFFFF;
 }
 
 /* ---------- BODY ---------- */
 
 body {
     font-family: Arial, sans-serif;
-    background: var(--creme);
-    color: var(--escuro);
+
+    /* Fundo principal creme, igual ao fundo da logo */
+    background: #f8f6f0;
+
+    color: var(--marrom);
 }
 
 /* ---------- HEADER ---------- */
 
 header {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     padding: 16px 40px;
 
     position: sticky;
+
     top: 0;
 
-    background: var(--branco);
+    /* Header claro, combinando com o fundo da logo */
+    background: var(--rosa-claro);
 
     border-bottom: 2px solid var(--rosa);
 }
 
 nav a {
-    color: var(--escuro);
+    color: var(--marrom);
+
     text-decoration: none;
+
     margin-left: 24px;
 
     transition: color 0.2s;
@@ -60,22 +70,33 @@ nav a:hover {
     color: var(--coral);
 }
 
-/* ---------- HERO ---------- */
+/* ---------- HERO: INÍCIO ---------- */
 
 .hero {
     min-height: 100vh;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-around;
 
     padding: 40px;
 
-    background: var(--rosa-claro);
+    /*
+       Fundo creme igual ao da logo.
+       O leve degradê adiciona um detalhe
+       sem fugir da identidade visual.
+    */
+    background: linear-gradient(
+        135deg,
+        #FCF5E5 0%
+    );
 }
 
 .hero-texto h2 {
     font-size: 48px;
+
     line-height: 1.2;
 
     color: var(--coral);
@@ -84,15 +105,16 @@ nav a:hover {
 .hero-texto p {
     margin: 16px 0 24px;
 
-    color: var(--escuro);
+    color: var(--marrom);
 }
 
-/* ---------- BOTÃO CTA ---------- */
+/* ---------- CTA: BOTÃO ---------- */
 
 .botao-cta {
     display: inline-block;
 
     background: var(--coral);
+
     color: var(--branco);
 
     padding: 16px 40px;
@@ -100,6 +122,7 @@ nav a:hover {
     border-radius: 12px;
 
     text-decoration: none;
+
     font-weight: bold;
 
     transition: transform 0.2s, background 0.2s;
@@ -123,6 +146,9 @@ nav a:hover {
     list-style: none;
 
     padding: 40px;
+
+    /* Fundo creme */
+    background: #FCF5E5;
 }
 
 .card {
@@ -143,6 +169,8 @@ nav a:hover {
 
 .card:hover {
     transform: translateY(-5px);
+
+    border-color: var(--coral);
 }
 
 .card img {
@@ -159,7 +187,7 @@ nav a:hover {
     font-size: 20px;
 }
 
-/* ---------- DEPOIMENTOS ---------- */
+/* ---------- PROVA SOCIAL ---------- */
 
 .grade-depoimentos {
     display: grid;
@@ -169,6 +197,8 @@ nav a:hover {
     gap: 24px;
 
     padding: 40px;
+
+    background: var(--rosa-claro);
 }
 
 .depoimento {
@@ -189,6 +219,7 @@ nav a:hover {
     border-radius: 50%;
 
     width: 80px;
+
     height: 80px;
 
     border: 3px solid var(--rosa);
@@ -213,7 +244,7 @@ summary {
 
     font-weight: bold;
 
-    color: var(--escuro);
+    color: var(--marrom);
 }
 
 details p {
