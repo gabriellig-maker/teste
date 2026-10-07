@@ -1,4 +1,4 @@
-# 🌿 GreenNest — Landing Page
+# 🎀 Mochi Cosplay - Lading page
 
 Landing page desenvolvida como exemplo didático para a disciplina de
 **Desenvolvimento de Sistemas** (Web Design) — IFSC Câmpus Chapecó.
@@ -9,7 +9,7 @@ com HTML5 e CSS3, sem frameworks e sem JavaScript.
 ## 🚀 Demonstração
 
 O site está publicado no GitHub Pages:
-**[https://laraoberderfer.github.io/landingpage_greennest/](https://laraoberderfer.github.io/landingpage_greennest/)**
+
 
 ## 📁 Estrutura do projeto
 -- index.html
