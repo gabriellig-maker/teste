@@ -8,7 +8,7 @@ com HTML5 e CSS3, sem frameworks e sem JavaScript.
 
 ## 🚀 Demonstração
 
-O site está publicado no GitHub Pages:
+O site está publicado no GitHub Pages: https://gabriellig-maker.github.io/teste/
 
 
 ## 📁 Estrutura do projeto
